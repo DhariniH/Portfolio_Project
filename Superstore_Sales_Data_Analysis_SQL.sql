@@ -19,10 +19,10 @@ GROUP BY [Sub-Category]
 Order BY Total_Profit Desc
 
 --Which is the most preferred Ship_Mode by the customers?
-SELECT [Ship_Mode], COUNT([Ship_Mode]) as Preferred_ShipMode
+SELECT [Ship_Mode], COUNT([Ship_Mode]) as ShipModeCount
 FROM Orders
 GROUP BY [Ship_Mode]
-ORDER BY Preferred_ShipMode Desc
+ORDER BY ShipModeCount Desc
 
 --List of Products with state and their profit margin.
 SELECT State, Category, Product_Name, ((SUM(Profit)/SUM(Sales))*100)  As Profit_Margin
